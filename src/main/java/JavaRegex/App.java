@@ -12,7 +12,7 @@ public class App
         System.out.println( "Hello World!" );
         regexPattern rh = new regexPattern();
         rh.regex("^import.*;");
-        rh.regex("0");
+        rh.regex("^.* \\bclass\\b");
 
     }
 }
