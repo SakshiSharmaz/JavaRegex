@@ -9,10 +9,10 @@ public class regexPattern {
     public void regex(String s) throws IOException {
         int count = 0 ;
 
-        BufferedReader br=new BufferedReader(new FileReader("/home/juno/testregex.txt"));
+        BufferedReader br=new BufferedReader(new FileReader("/home/juno/Downloads/Telegram Desktop/RootDocProcessor.java"));
         String line;
         while((line=br.readLine())!=null){
-            Pattern p=Pattern.compile(s);
+            Pattern p=Pattern.compile(s,Pattern.MULTILINE);
             Matcher m=p.matcher(line);
 
             while (m.find()) {
@@ -22,5 +22,6 @@ public class regexPattern {
         }
 
         System.out.println("Total values found " + count);
+        System.out.println();
     }
 }
